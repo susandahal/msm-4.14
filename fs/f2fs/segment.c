@@ -3,7 +3,7 @@
  * fs/f2fs/segment.c
  *
  * Copyright (c) 2012 Samsung Electronics Co., Ltd.
- *             http://www.samsung.com/
+ * Copyright (C) 2020 XiaoMi, Inc.
  */
 #include <linux/fs.h>
 #include <linux/f2fs_fs.h>
@@ -3991,7 +3991,7 @@ static int build_sit_info(struct f2fs_sb_info *sbi)
 	struct sit_info *sit_i;
 	unsigned int sit_segs, start;
 	char *src_bitmap, *bitmap;
-	unsigned int bitmap_size, main_bitmap_size, sit_bitmap_size;
+	unsigned int bitmap_size, main_bitmap_size, sit_main_bitmap_size, sit_bitmap_size;
 
 	/* allocate memory for SIT information */
 	sit_i = f2fs_kzalloc(sbi, sizeof(struct sit_info), GFP_KERNEL);

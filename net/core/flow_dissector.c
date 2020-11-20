@@ -900,6 +900,8 @@ static const void *flow_keys_hash_start(const struct flow_keys *flow)
 {
 	BUILD_BUG_ON(FLOW_KEYS_HASH_OFFSET % SIPHASH_ALIGNMENT);
 	return &flow->FLOW_KEYS_HASH_START_FIELD;
+	BUILD_BUG_ON(FLOW_KEYS_HASH_OFFSET % SIPHASH_ALIGNMENT);
+	return &flow->FLOW_KEYS_HASH_START_FIELD;
 }
 
 static inline size_t flow_keys_hash_length(const struct flow_keys *flow)
